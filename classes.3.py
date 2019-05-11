@@ -5,8 +5,8 @@
 """
 
 class User():
-    # methods with double underscores are called Dunder Methods like __init__()
-    age = 20 # this is an example of a global variable
+    """ A member of this social media site. Storing their Full Name and Birthday """
+    # This """ """ is called a docstring
 
     def __init__(self, full_name, birthday):
         # The first method self is used to reference the instance example: user1
@@ -14,11 +14,14 @@ class User():
         # not attaching instance means that it is a global variable and every instance can modify it
         self.name = full_name
         self.birthday = birthday
- 
+        # extract first and last name
+        name_pcs = full_name.split(" ")
+        self.first_name = name_pcs[0]
+        self.last_name = name_pcs[1]
+
 user1 = User("Royce Chua","19971023")
 print(user1.name)
 print(user1.birthday)
-user1.age = 21
-print(user1.age)
-user2 = User("Chris Mango", "19931205")
-print(user2.age)
+print(user1.first_name)
+print(user1.last_name)
+help(User)

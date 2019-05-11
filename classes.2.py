@@ -18,7 +18,7 @@ class User():
         self.first_name = name_pcs[0]
         self.last_name = name_pcs[1]
 
-user1 = User("Royce Chua","10231997")
+user1 = User("Royce Chua","19971023")
 print(user1.name)
 print(user1.birthday)
 print(user1.first_name)
