@@ -22,14 +22,12 @@ class Student:
         #         return "He" 
         #     elif gender=="F": 
         #         return "She" 
-        #     else: 
-        #         return "Other gender"
         # if self.getGPA()>=passing:
         #     return f"{getSalutation(self.gender)} passed"
         # else:
         #     return f"{getSalutation(self.gender)} failed"   
 
-        self.pronoun = lambda gender: "He" if gender=="M" else ("She" if gender=="F" else "Other gender")
+        self.pronoun = lambda gender: "He" if gender=="M" else ("She" if gender=="F")
         if self.getGPA()>=self.passing:
             return f"{self.pronoun(self.gender)} passed"
         else:
