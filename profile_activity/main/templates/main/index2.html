@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static '' %}" />
+</head>
+<body>
+    <p></p>
+    <p>{{ profile.exp_years }}</p>
+    <p>{{ profile.college_degree }}</p>
+    <p>{{ profile.contact }}</p>
+    <p>{{ profile.email_address }}</p>
+    
+    <p>{{ profile.about_me }}</p>
+     
+    {% for job in job_positions %}
+        <p>{{ job.job_title }}</p>
+        <p>{{ job.company }}</p>
+        <p>{{ job.job_description }}</p>
+        <p>From {{ job.year_from }} to {{ job.year_to }}</p>
+    {% endfor %}    
+
+    <script type="text/javascript" src="{% static '' %}"></script>
+    <script type="text/javascript" src="{% static '' %}"></script>
+    <script type="text/javascript" src="{% static '' %}"></script>
+</body>
+</html>
