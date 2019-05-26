@@ -7,6 +7,8 @@ $(function() {
     },
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
+
+      var csrftoken = Cookies.get('csrftoken');
       // get values from FORM
       var name = $("input#name").val();
       var email = $("input#email").val();
@@ -20,7 +22,7 @@ $(function() {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "././mail/contact_me.php",
+        url: "send_email/",
         type: "POST",
         data: {
           name: name,
