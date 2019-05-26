@@ -95,12 +95,17 @@ class DecimalToRomanNumeral():
             self.hundred_word = "-hundred"
 
         if self.tens<=20 or self.tens in [20,30,40,50,60,70,80,90]: 
-            return f"{self.words[self.thousands]} {self.thousand_word} {self.words[self.hundreds]}{self.hundred_word} {self.words[self.tens]}"
+            return f"""{self.words[self.thousands]} {self.thousand_word} 
+                       {self.words[self.hundreds]}{self.hundred_word} 
+                       {self.words[self.tens]}"""
         elif self.tens>20:
             self.tens = math.floor((self.number%100)/10)*10
             self.ones = math.floor(self.number%10)
-            return f"{self.words[self.thousands]} {self.thousand_word} {self.words[self.hundreds]}{self.hundred_word} {self.words[self.tens]} {self.words[self.ones]}"
+            return f"""{self.words[self.thousands]} {self.thousand_word} 
+                       {self.words[self.hundreds]}{self.hundred_word} 
+                       {self.words[self.tens]} {self.words[self.ones]}"""
 
-converter = DecimalToRomanNumeral(13)
+decimal = int(input("Enter a decimal number: "))
+converter = DecimalToRomanNumeral(decimal)
 print(converter.convert())
 print(converter.displayInWords())
