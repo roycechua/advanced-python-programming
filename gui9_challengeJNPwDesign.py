@@ -11,7 +11,7 @@ class Window(QtGui.QMainWindow):
     def __init__(self):
         super (Window, self).__init__()
         self.setGeometry(50, 50, 500, 300)
-        self.setWindowTitle("CLMITS Rocks!")
+        self.setWindowTitle("Jack-en-Poy")
         self.setWindowIcon(QtGui.QIcon('images/python.png'))
 
         self.options = {1:"Rock",2:"Paper",3:"Scissors"}
